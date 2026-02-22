@@ -146,4 +146,4 @@ class Adam(BaseDescent):
         vk = self.v/(1-self.beta2**self.iteration)
         h = lr/(np.sqrt(vk)+self.eps)
         self.model.w -= h*mk
-        return -h
+        return -h*mk
